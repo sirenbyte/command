@@ -2,6 +2,6 @@ server:
   port: 9091
 
 ssh:
-  username: root
-  host: 192.168.102.6
+  username: username
+  host: ip
   password: "password"

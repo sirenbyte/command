@@ -4,4 +4,4 @@ server:
 ssh:
   username: root
   host: 192.168.102.6
-  password: "#Nnl4szn"
+  password: "password"

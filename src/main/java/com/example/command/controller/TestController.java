@@ -1,9 +1,9 @@
 package com.example.command.controller;
 
-import com.example.command.service.MainService;
+import com.example.command.service.SshService;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class TestController {
 
-    private final MainService mainService;
+    private final SshService sshService;
 
-    @GetMapping("/test/{command}")
-    public void RunCommand(@PathVariable String command){
-        mainService.RunCommand(command);
+    @PostMapping("/test")
+    public void RunCommand(@RequestBody String command) {
+        sshService.runCommand(command);
     }
 }

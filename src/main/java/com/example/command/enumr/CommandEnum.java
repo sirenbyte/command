@@ -5,8 +5,8 @@ import lombok.Getter;
 @Getter
 public enum CommandEnum {
 
-    RESTART("sudo systemctl restart nginx;"),
-    STATUS("sudo systemctl status nginx;");
+    RESTART("systemctl restart nginx;"),
+    STATUS("systemctl status nginx;");
 
     String command;
 
